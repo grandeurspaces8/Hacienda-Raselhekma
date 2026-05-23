@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-0LTCXNSW38');
+           gtag('config', 'AW-18130004471');
         `}
       </Script>
 
