@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import Script from 'next/script'
 const PHONE = '01008900076'
 const WA = `https://wa.me/2${PHONE}/?text=مرحباً، أريد الاستفسار عن مشروع هاسيندا رأس الحكمة من بالم هيلز`
 const URL = 'https://formsubmit.co/ajax/leads@grandeur-spaces.com'
@@ -25,7 +25,13 @@ export default function LeadForm({ dark, title, subtitle, id }) {
           _template: 'table', _captcha: 'false',
         }),
       })
-      const d = await res.json()
+      const d = await res.json() 
+      if (typeof window !== 'undefined' && window.gtag) {
+  window.gtag('event', 'generate_lead', {
+    value: 1,
+    currency: 'USD'
+  })
+}
       if (d.success === 'true' || d.success === true) { setStatus('success'); setForm({ name: '', phone: '', unit: '' }) }
       else setStatus('error')
     } catch { setStatus('error') }
