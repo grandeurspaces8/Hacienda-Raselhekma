@@ -2,280 +2,262 @@ import Head from 'next/head'
 import LeadForm from '../components/LeadForm'
 
 const PHONE = '01008900076'
-const WA_LINK = `https://wa.me/2${PHONE}/?text=مرحباً، أنا مهتم بمشروع Hacienda Ras El Hekma — بالم هيلز`
+const WA = `https://wa.me/2${PHONE}/?text=مرحباً، أريد الاستفسار عن مشروع هاسيندا رأس الحكمة من بالم هيلز`
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Hacienda Ras El Hekma — Palm Hills | رأس الحكمة</title>
-        <meta name="description" content="Hacienda Ras El Hekma من Palm Hills — 1,400 فدان، 4.8 كم شاطئ، تصميم OBMI. فلل وشاليهات وبيتش هومز بأفضل الأسعار." />
+        <title>هاسيندا رأس الحكمة — Palm Hills Developments</title>
+        <meta name="description" content="أول مطور مصري في رأس الحكمة — 1,400 فدان، 4.8 كم شاطئ، تصميم OBMI، مارينا دولية، 3 فنادق فاخرة." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preload" as="image" href="/images/aerial.jpeg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
 
-      {/* ─── NAVBAR ─── */}
+      {/* NAVBAR */}
       <nav className="navbar">
         <div className="navbar-inner">
-          <a href="#home" className="navbar-brand">
-            PALM HILLS <span>·</span> HACIENDA
-          </a>
+          <div className="navbar-brand">
+            <span className="b1">PALM HILLS</span>
+            <span className="b2">Hacienda Ras El Hekma</span>
+          </div>
           <ul className="navbar-links">
-            <li><a href="#about">المشروع</a></li>
+            <li><a href="#home">المشروع</a></li>
             <li><a href="#masterplan">الماستر بلان</a></li>
             <li><a href="#units">الأسعار</a></li>
-            <li><a href="#contact">تواصل</a></li>
+            <li><a href="#register2">تواصل</a></li>
             <li><a href="#register" className="btn-nav">سجّل الآن</a></li>
           </ul>
         </div>
       </nav>
 
-      {/* ─── HERO ─── */}
+      {/* HERO */}
       <section className="hero" id="home">
         <div className="hero-inner">
           <div>
-            <span className="hero-eyebrow">Palm Hills Developments · رأس الحكمة</span>
-            <h1>
-              Hacienda
-              <strong>Ras El Hekma</strong>
-            </h1>
-            <p className="hero-sub">
-              أول مطور مصري في رأس الحكمة — مدينة ذكية متكاملة على مدار العام
-              على مساحة 1,400 فدان بتصميم OBMI العالمي.
+            <div className="hero-eyebrow">Palm Hills Developments</div>
+            <h1>هاسيندا<br /><em>رأس الحكمة</em></h1>
+            <p className="hero-tagline">أول مطور مصري في رأس الحكمة</p>
+            <p className="hero-desc">
+              مدينة متكاملة على مدار العام على مساحة 1,400 فدان بتصميم OBMI العالمي.
+              4.8 كم شاطئ · مارينا دولية · مطار دولي · 3 فنادق فاخرة.
             </p>
-            <div className="hero-stats">
-              <div className="hero-stat"><h3>1,400</h3><p>فدان</p></div>
-              <div className="hero-stat"><h3>4.8 كم</h3><p>شاطئ</p></div>
-              <div className="hero-stat"><h3>كيلو 238</h3><p>رأس الحكمة</p></div>
-              <div className="hero-stat"><h3>95%</h3><p>إطلالة بحر أو لاجون</p></div>
+            <div className="hero-pills">
+              <span className="hero-pill">كيلو 238</span>
+              <span className="hero-pill">4.8 كم شاطئ</span>
+              <span className="hero-pill">95% إطلالة بحر</span>
+              <span className="hero-pill">تصميم OBMI</span>
             </div>
             <div className="hero-btns">
               <a href="#register" className="btn-primary">سجّل الآن ←</a>
-              <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-ghost">💬 واتساب</a>
+              <a href={WA} target="_blank" rel="noreferrer" className="btn-wa">💬 واتساب</a>
             </div>
           </div>
           <LeadForm id="register" />
         </div>
       </section>
 
-      {/* ─── STATS BAR ─── */}
+      {/* STATS */}
       <div className="stats-bar">
-        <div className="stats-bar-inner">
-          <div className="sbar-item"><h3>1,400</h3><p>فدان مساحة إجمالية</p></div>
-          <div className="sbar-item"><h3>4.8 كم</h3><p>واجهة شاطئية</p></div>
-          <div className="sbar-item"><h3>84%</h3><p>مياه وخضرة</p></div>
-          <div className="sbar-item"><h3>95%</h3><p>إطلالة بحر أو لاجون</p></div>
-          <div className="sbar-item"><h3>5%</h3><p>مقدم فقط</p></div>
+        <div className="stats-inner">
+          <div className="stat-item"><h3>1,400</h3><p>فدان</p></div>
+          <div className="stat-item"><h3>4.8 كم</h3><p>شاطئ</p></div>
+          <div className="stat-item"><h3>95%</h3><p>إطلالة بحر أو لاجون</p></div>
+          <div className="stat-item"><h3>84%</h3><p>مياه وخضرة</p></div>
+          <div className="stat-item"><h3>كيلو 238</h3><p>رأس الحكمة</p></div>
         </div>
       </div>
 
-      {/* ─── ABOUT ─── */}
-      <section className="section section-bg" id="about">
+      {/* ABOUT */}
+      <section className="section section-sand" id="about">
         <div className="section-inner">
-          <div className="about-grid">
-            <div className="about-img">
-              <img src="/images/aerial.jpeg" alt="Hacienda Ras El Hekma" loading="lazy" />
+          <div className="two-col">
+            <div className="col-img">
+              <img src="/images/masterplan2.jpeg" alt="هاسيندا رأس الحكمة" loading="lazy" />
             </div>
-            <div className="about-text">
-              <span className="sec-eye">عن المشروع</span>
-              <h2 className="sec-title">مدينة متكاملة<br /><strong>في رأس الحكمة</strong></h2>
-              <p className="sec-desc">
-                أول مطور مصري في رأس الحكمة — مدينة ذكية متكاملة على مدار العام
-                على مساحة 1,400 فدان بتصميم OBMI العالمي. تقع على كيلو 238
-                بواجهة شاطئية 4.8 كم.
+            <div>
+              <div className="tag">عن المشروع</div>
+              <h2 className="sec-title">مدينة متكاملة في رأس الحكمة</h2>
+              <p className="sec-desc" style={{ marginBottom: 16 }}>
+                أول مطور مصري في رأس الحكمة — مدينة ذكية متكاملة على مدار العام على مساحة
+                <strong> 1,400 فدان</strong> بتصميم <strong>OBMI</strong> العالمي.
+                تقع على <strong>كيلو 238</strong> بواجهة شاطئية 4.8 كم.
               </p>
-              <ul>
-                <li>مطار دولي ومارينا دولية</li>
-                <li>منطقة أعمال مركزية وشبكة نقل سريع</li>
-                <li>منطقة حرة ومدينة ذكية</li>
-                <li>3 فنادق فاخرة ونوادي رياضية</li>
-                <li>84% من المشروع مساحات مائية وخضرة</li>
-                <li>95% من الوحدات بإطلالة لاجونز أو بحر مباشر</li>
-              </ul>
-              <a href="#register" className="btn-primary" style={{ marginTop: 24, display: 'inline-flex' }}>
-                احصل على البروشور الآن ←
-              </a>
+              <p className="sec-desc" style={{ marginBottom: 20 }}>
+                المشروع يضم مطار دولي ومارينا دولية ومنطقة أعمال مركزية وشبكة نقل سريع
+                ومنطقة حرة و3 فنادق فاخرة ونوادي رياضية ومناطق ترفيه ودايننج.
+                <strong> 84%</strong> من المشروع مساحات مائية وخضرة و<strong>95%</strong> من الوحدات بإطلالة لاجونز أو بحر مباشر.
+              </p>
+              <a href="#register" className="btn-primary">سجّل الآن واحصل على البروشور ←</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── LOCATION ─── */}
-      <section className="section section-navy2" id="location">
+      {/* FEATURES */}
+      <section className="section" id="features">
         <div className="section-inner">
-          <div className="about-grid">
-            <div>
-              <span className="sec-eye">الموقع</span>
-              <h2 className="sec-title light">كيلو 238<br /><strong>رأس الحكمة</strong></h2>
-              <p className="sec-desc light">
-                يقع المشروع على كيلو 238 بالساحل الشمالي — رأس الحكمة.
-                على بُعد 247 كم من القاهرة و238 كم من الإسكندرية.
-              </p>
-              <div className="features-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', marginTop: 24 }}>
-                {[
-                  ['✈️', 'مطار دولي', 'على مقربة من المطار الدولي الجديد'],
-                  ['⚓', 'مارينا دولية', 'مارينا عالمية داخل المشروع'],
-                  ['🏖️', '4.8 كم شاطئ', 'واجهة شاطئية مباشرة على البحر'],
-                  ['🌊', 'لاجونز', '95% من الوحدات بإطلالة مباشرة'],
-                ].map(([icon, title, desc]) => (
-                  <div key={title} className="feat-card">
-                    <div className="feat-icon">{icon}</div>
-                    <h3>{title}</h3>
-                    <p>{desc}</p>
-                  </div>
-                ))}
+          <div style={{ textAlign: 'center', marginBottom: 8 }}>
+            <div className="tag">مميزات المشروع</div>
+            <h2 className="sec-title">تجربة سكنية لا مثيل لها</h2>
+            <p className="sec-desc" style={{ maxWidth: 540, margin: '0 auto' }}>
+              كل ما تحتاجه في مكان واحد — مدينة متكاملة على مدار العام
+            </p>
+          </div>
+          <div className="features-grid">
+            {[
+              ['✈️', 'مطار دولي', 'مطار دولي داخل المشروع للوصول الفوري من أي مكان في العالم.'],
+              ['⛵', 'مارينا دولية', 'مارينا دولية لمحبي البحر واليخوت والرياضات المائية.'],
+              ['🏨', '3 فنادق فاخرة', 'ثلاثة فنادق 5 نجوم بمعايير عالمية لضيوفك وأسرتك.'],
+              ['🌊', '4.8 كم شاطئ', 'أطول واجهة شاطئية خاصة في الساحل الشمالي الغربي.'],
+              ['🏙️', 'منطقة أعمال', 'منطقة أعمال مركزية وMixed Use ومنطقة حرة متكاملة.'],
+              ['🏡', '95% إطلالة', '95% من الوحدات بإطلالة مباشرة على البحر أو اللاجونز.'],
+              ['🌿', '84% خضرة ومياه', '84% من المساحة مساحات خضراء ومسطحات مائية.'],
+              ['🚄', 'نقل سريع', 'شبكة نقل داخلية سريعة تربط جميع مناطق المشروع.'],
+              ['🏋️', 'نوادي رياضية', 'ملاعب ونوادي رياضية ومراكز صحة وعافية متكاملة.'],
+            ].map(([icon, title, desc]) => (
+              <div key={title} className="feat-card">
+                <div className="feat-icon">{icon}</div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
-            </div>
-            <div className="about-img">
-              <img src="/images/location.jpeg" alt="Hacienda Ras El Hekma Location" loading="lazy" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* FORM 1 */}
-      <LeadForm dark id="form1" title="سجّل اهتمامك الآن" subtitle="احصل على البروشور والأسعار التفصيلية وخطط السداد" />
+      <LeadForm dark id="form1" title="سجّل الآن واحصل على البروشور" subtitle="فريقنا المتخصص سيتواصل معك بالأسعار التفصيلية وخطط السداد الكاملة" />
 
-      {/* ─── MASTERPLAN ─── */}
-      <section className="section section-bg" id="masterplan">
+      {/* MASTERPLAN */}
+      <section className="section section-sand" id="masterplan">
         <div className="section-inner">
-          <div style={{ textAlign: 'center' }}>
-            <span className="sec-eye">الماستر بلان</span>
-            <h2 className="sec-title">4 صفوف فلل<br /><strong>كلها بإطلالة بحر كاملة</strong></h2>
+          <div style={{ textAlign: 'center', marginBottom: 32 }}>
+            <div className="tag">الماستر بلان</div>
+            <h2 className="sec-title">4 صفوف فلل — كلها بإطلالة بحر كاملة</h2>
             <p className="sec-desc" style={{ maxWidth: 600, margin: '0 auto' }}>
-              تصميم OBMI يضمن إن كل الصفوف الأربعة ليها إطلالة بحر كاملة.
-              84% من المشروع مياه وخضرة.
+              تصميم OBMI يضمن إن كل الصفوف الأربعة ليها إطلالة بحر كاملة. 84% من المشروع مياه وخضرة.
             </p>
           </div>
-          <div className="masterplan-img">
-            <img src="/images/masterplan2.jpeg" alt="Hacienda Ras El Hekma Masterplan" loading="lazy" />
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, marginTop: 28 }}>
+          <img src="/images/masterplan.jpeg" alt="Masterplan هاسيندا رأس الحكمة" loading="lazy"
+            style={{ width: '100%', borderRadius: 16, boxShadow: '0 8px 32px rgba(0,0,0,0.12)', marginBottom: 40 }} />
+
+          {/* ROWS */}
+          <div className="features-grid">
             {[
               ['الصف الأول', '7 غرف · طابق واحد', 'أرض 1,300 م² · بناء 1,150 م²'],
               ['الصف الثاني', '6 غرف · طابق واحد', 'أرض 850 م² · بناء 700 م²'],
               ['الصف الثالث', '5 غرف · طابقين', 'أرض 750 م² · بناء 700 م²'],
               ['الصف الرابع', 'طابقين', 'أرض 770 م² · بناء 515 م²'],
             ].map(([title, sub, desc]) => (
-              <div key={title} style={{
-                background: '#fff', borderRadius: 12, padding: '20px 16px',
-                boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
-                borderTop: '3px solid var(--teal)', textAlign: 'center'
-              }}>
-                <h4 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, color: 'var(--navy)', marginBottom: 6 }}>{title}</h4>
-                <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--teal)', marginBottom: 4 }}>{sub}</p>
-                <p style={{ fontSize: 12, color: 'var(--muted)' }}>{desc}</p>
+              <div key={title} className="feat-card" style={{ textAlign: 'center' }}>
+                <div className="feat-icon">🏖️</div>
+                <h3>{title}</h3>
+                <p style={{ fontWeight: 700, color: 'var(--navy)', marginBottom: 6 }}>{sub}</p>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── VILLA ─── */}
-      <section className="section section-navy">
+      {/* LOCATION */}
+      <section className="section section-navy" id="location">
         <div className="section-inner">
-          <div className="about-grid">
+          <div className="two-col">
             <div>
-              <span className="sec-eye">تصميم OBMI</span>
-              <h2 className="sec-title light">تجربة معيشية<br /><strong>لا مثيل لها</strong></h2>
-              <p className="sec-desc light">
-                وحدات مصممة بأعلى معايير الفخامة والراحة، تطل مباشرة على البحر المتوسط
-                والمسطحات المائية الداخلية.
+              <div className="tag light">الموقع</div>
+              <h2 className="sec-title light">كيلو 238 —<br />رأس الحكمة</h2>
+              <p className="sec-desc light" style={{ marginBottom: 20 }}>
+                هاسيندا رأس الحكمة في أجمل بقعة على الساحل الشمالي الغربي المصري —
+                رأس الحكمة بمياهها الفيروزية الشهيرة.
               </p>
-              <div className="features-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', marginTop: 20 }}>
-                {[
-                  ['🏖️', 'شاطئ خاص', 'شاطئ رملي خاص على المتوسط'],
-                  ['🌊', 'لاجونز', 'مسطحات مائية داخلية فريدة'],
-                  ['⛵', 'مارينا', 'مارينا دولية داخل المشروع'],
-                  ['🏨', 'فنادق فاخرة', '3 فنادق 5 نجوم داخل المشروع'],
-                ].map(([icon, title, desc]) => (
-                  <div key={title} className="feat-card">
-                    <div className="feat-icon">{icon}</div>
-                    <h3>{title}</h3><p>{desc}</p>
-                  </div>
-                ))}
-              </div>
+              <ul className="check-list">
+                <li>كيلو 238 على الطريق الساحلي الشمالي</li>
+                <li>المشروع المجاور لهاسيندا هينيش</li>
+                <li>247 كم من القاهرة</li>
+                <li>238 كم من الإسكندرية</li>
+                <li>مطار دولي داخل المشروع</li>
+              </ul>
+              <a href="#register" className="btn-primary" style={{ marginTop: 24 }}>سجّل الآن ←</a>
             </div>
-            <div className="about-img">
-              <img src="/images/villa.jpeg" alt="Hacienda Villa" loading="lazy" />
+            <div className="col-img">
+              <img src="/images/location.jpeg" alt="موقع هاسيندا رأس الحكمة" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── UNITS & PRICES ─── */}
-      <section className="section section-bg" id="units">
+      {/* UNITS & PRICES */}
+      <section className="section section-navy" id="units">
         <div className="section-inner">
-          <div style={{ textAlign: 'center' }}>
-            <span className="sec-eye">الوحدات والأسعار</span>
-            <h2 className="sec-title">اختر وحدتك<br /><strong>في Hacienda Ras El Hekma</strong></h2>
+          <div style={{ textAlign: 'center', marginBottom: 8 }}>
+            <div className="tag light">الوحدات والأسعار</div>
+            <h2 className="sec-title light">الوحدات والأسعار</h2>
+            <p className="sec-desc light" style={{ maxWidth: 540, margin: '0 auto' }}>
+              تشكيلة متنوعة من فلل وشاليهات وبيتش هومز تناسب مختلف الاحتياجات
+            </p>
           </div>
           <div className="units-grid">
             {[
-              { title: 'Duo — توين هاوس', size: 'مساحات متنوعة', price: '44,000,000', currency: 'جنيه', badge: null, payment: '5% مقدم + 5% تعاقد · تقسيط 8 سنوات' },
-              { title: 'Senior Chalet كبير', size: 'مساحات واسعة', price: '32,500,000', currency: 'جنيه', badge: 'الأكثر طلباً', payment: '5% مقدم + 5% تعاقد · تقسيط 10 سنوات' },
-              { title: 'Senior Chalet صغير', size: 'مساحة مريحة', price: '27,500,000', currency: 'جنيه', badge: null, payment: '5% مقدم + 5% تعاقد · تقسيط 10 سنوات' },
-              { title: 'Junior Chalet', size: 'مثالي للاستثمار', price: '23,500,000', currency: 'جنيه', badge: null, payment: '5% مقدم + 5% تعاقد · تقسيط 10 سنوات' },
-              { title: 'Beach Home — 2 غرفة', size: 'مباشر على الشاطئ', price: '14,700,000', currency: 'جنيه', badge: null, payment: '5% مقدم + 5% تعاقد · تقسيط 10 سنوات' },
-              { title: 'Beach Home — 3 غرف', size: 'مباشر على الشاطئ', price: '21,900,000', currency: 'جنيه', badge: null, payment: '5% مقدم + 5% تعاقد · تقسيط 10 سنوات' },
-            ].map((u, i) => (
-              <div key={i} className="unit-card" style={i === 1 ? { borderColor: 'var(--teal)' } : {}}>
-                {u.badge && <div className="unit-badge-top">{u.badge}</div>}
-                <h3>{u.title}</h3>
-                <div className="unit-size">{u.size}</div>
-                <div className="unit-price">{u.price} <span>{u.currency}</span></div>
-                <div className="unit-payment">{u.payment}</div>
-                <a href="#contact" className="unit-cta">سجّل الآن ←</a>
+              ['Duo — توين هاوس', '44,000,000 ج'],
+              ['Senior Chalet كبير', '32,500,000 ج'],
+              ['Senior Chalet صغير', '27,500,000 ج'],
+              ['Junior Chalet', '23,500,000 ج'],
+              ['Beach Home 1 غرفة', '11,700,000 ج'],
+              ['Beach Home 2 غرفة', '14,700,000 ج'],
+              ['Beach Home 3 غرف', '21,900,000 ج'],
+            ].map(([title, price]) => (
+              <div key={title} className="unit-card">
+                <h4>{title}</h4>
+                <div className="unit-price">{price}</div>
+                <a href="#register2">سجّل الآن</a>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* ─── PAYMENT ─── */}
-      <section className="section section-navy2" id="payment">
-        <div className="section-inner">
-          <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            <span className="sec-eye">نظام السداد</span>
-            <h2 className="sec-title light">أنظمة سداد<br /><strong>مرنة للجميع</strong></h2>
-          </div>
-          <div className="payment-grid">
-            <div className="pay-card">
-              <h4>جميع الأنواع</h4>
-              <div className="pay-val">5% + 5%</div>
-              <p>مقدم + تعاقد<br />تقسيط 10 سنوات</p>
-            </div>
-            <div className="pay-card">
-              <h4>فلل صف 1–4</h4>
-              <div className="pay-val">5% + 5%</div>
-              <p>مقدم + تعاقد<br />تقسيط 8 سنوات</p>
-            </div>
-            <div className="pay-card">
-              <h4>الأجانب</h4>
-              <div className="pay-val">نظام كامل</div>
-              <p>نظام سداد خاص للأجانب<br />مش لحد التسليم فقط</p>
+          {/* PAYMENT */}
+          <div style={{ marginTop: 48, textAlign: 'center' }}>
+            <div className="tag light">نظام السداد</div>
+            <h3 className="sec-title light" style={{ fontSize: 26, marginBottom: 24 }}>أنظمة السداد المتاحة</h3>
+            <div className="payment-grid">
+              <div className="pay-box">
+                <h4>جميع الأنواع</h4>
+                <p>5% + 5%</p>
+                <span>مقدم + تعاقد · تقسيط 10 سنوات</span>
+              </div>
+              <div className="pay-box">
+                <h4>فلل صف 1–4</h4>
+                <p>5% + 5%</p>
+                <span>مقدم + تعاقد · تقسيط 8 سنوات</span>
+              </div>
+              <div className="pay-box">
+                <h4>للأجانب</h4>
+                <p>نظام كامل</p>
+                <span>سداد مش لحد التسليم فقط</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── GALLERY ─── */}
-      <section className="section section-bg">
+      {/* GALLERY */}
+      <section className="section section-sand" id="gallery">
         <div className="section-inner">
-          <div style={{ textAlign: 'center', marginBottom: 16 }}>
-            <span className="sec-eye">صور المشروع</span>
-            <h2 className="sec-title">لمحات من<br /><strong>Hacienda Ras El Hekma</strong></h2>
+          <div style={{ textAlign: 'center', marginBottom: 8 }}>
+            <div className="tag">صور المشروع</div>
+            <h2 className="sec-title">لمحات من هاسيندا رأس الحكمة</h2>
           </div>
           <div className="gallery-grid">
             {[
-              ['/images/aerial.jpeg', 'إطلالة جوية'],
-              ['/images/masterplan2.jpeg', 'Hacienda Ras El Hekma'],
+              ['/images/aerial.jpeg', 'منظر جوي'],
+              ['/images/villa.jpeg', 'فيلا داخلية'],
               ['/images/masterplan.jpeg', 'الماستر بلان'],
-              ['/images/villa.jpeg', 'تصميم الفيلا'],
-              ['/images/location.jpeg', 'الموقع'],
-              ['/images/aerial.jpeg', 'المشروع'],
+              ['/images/masterplan2.jpeg', 'المشروع الكامل'],
+              ['/images/location.jpeg', 'خريطة الموقع'],
+              ['/images/aerial.jpeg', 'رأس الحكمة'],
             ].map(([src, alt], i) => (
               <a key={i} href={src} target="_blank" rel="noreferrer" className="gallery-item">
                 <img src={src} alt={alt} loading="lazy" />
@@ -285,66 +267,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── ABOUT PALM HILLS ─── */}
+      {/* ABOUT PALM HILLS */}
       <section className="section section-navy">
-        <div className="section-inner" style={{ maxWidth: 800, textAlign: 'center' }}>
-          <span className="sec-eye">Palm Hills Developments</span>
-          <h2 className="sec-title light">أول مطور مصري<br /><strong>في رأس الحكمة</strong></h2>
-          <p className="sec-desc light" style={{ maxWidth: 600, margin: '0 auto 32px' }}>
-            Palm Hills Developments واحدة من أكبر المطورين العقاريين في مصر والشرق الأوسط.
-            تأسست عام 1997 ومدرجة في البورصة المصرية وبورصة لندن.
-            أكثر من 35 مشروع متكامل ومحفظة أراضي 29 مليون متر مربع.
-          </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 40, flexWrap: 'wrap' }}>
-            {[['35+','مشروع'],['1997','تأسست'],['29M م²','محفظة أراضي'],['EGX & LSE','مدرجة بالبورصة']].map(([val, label]) => (
-              <div key={label} style={{ textAlign: 'center' }}>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 700, color: 'var(--teal)' }}>{val}</div>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginTop: 4 }}>{label}</div>
-              </div>
-            ))}
+        <div className="section-inner">
+          <div className="two-col">
+            <div>
+              <div className="tag light">من نحن</div>
+              <h2 className="sec-title light">Palm Hills Developments<br />أول مطور مصري في رأس الحكمة</h2>
+              <p className="sec-desc light" style={{ marginBottom: 16 }}>
+                Palm Hills Developments واحدة من أكبر المطورين العقاريين في مصر والشرق الأوسط.
+                تأسست عام <strong style={{ color: 'var(--teal2)' }}>1997</strong> ومدرجة في البورصة المصرية وبورصة لندن.
+                أكثر من <strong style={{ color: 'var(--teal2)' }}>35 مشروع</strong> متكامل ومحفظة أراضي
+                <strong style={{ color: 'var(--teal2)' }}> 29 مليون متر مربع</strong>.
+              </p>
+              <ul className="check-list">
+                <li>تأسست عام 1997</li>
+                <li>مدرجة في البورصة المصرية وبورصة لندن (EGX & LSE)</li>
+                <li>أكثر من 35 مشروعاً متكاملاً</li>
+                <li>محفظة أراضي 29 مليون متر مربع</li>
+              </ul>
+            </div>
+            <div className="col-img">
+              <img src="/images/villa.jpeg" alt="Palm Hills فيلا" loading="lazy" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* FINAL FORM */}
-      <LeadForm dark id="contact" />
+      <LeadForm dark id="register2" title="ابدأ رحلتك في رأس الحكمة" subtitle="سجّل بياناتك واحصل على البروشور والأسعار التفصيلية وخطط السداد. فريقنا هيتواصل معاك خلال 24 ساعة." />
 
-      {/* ─── FOOTER ─── */}
+      {/* FOOTER */}
       <footer className="footer">
         <div className="footer-inner">
           <div className="footer-brand">
-            <div className="footer-brand-name">PALM HILLS <span>·</span> HACIENDA</div>
-            <p>Hacienda Ras El Hekma — أول مطور مصري في رأس الحكمة. 1,400 فدان، 4.8 كم شاطئ، تصميم OBMI العالمي.</p>
+            <div className="b1">PALM HILLS</div>
+            <span className="b2">Hacienda Ras El Hekma</span>
+            <p>أول مطور مصري في رأس الحكمة — 1,400 فدان، 4.8 كم شاطئ، تصميم OBMI العالمي.</p>
           </div>
           <div className="footer-col">
             <h4>روابط سريعة</h4>
             <ul>
-              <li><a href="#about">المشروع</a></li>
+              <li><a href="#about">عن المشروع</a></li>
               <li><a href="#masterplan">الماستر بلان</a></li>
+              <li><a href="#location">الموقع</a></li>
               <li><a href="#units">الأسعار</a></li>
-              <li><a href="#payment">نظام السداد</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>تواصل معنا</h4>
             <p>
-              <a href={`tel:${PHONE}`} style={{ color: 'var(--teal)', textDecoration: 'none', display: 'block', marginBottom: 8, fontSize: 16, fontWeight: 700 }}>
-                📞 {PHONE}
-              </a>
-              <a href={WA_LINK} target="_blank" rel="noreferrer" style={{ color: '#25d366', textDecoration: 'none', display: 'block', marginBottom: 8 }}>
-                💬 واتساب
-              </a>
-              leads@grandeur-spaces.com
+              <strong style={{ color: 'rgba(255,255,255,0.7)' }}>هاتف:</strong><br />
+              <a href={`tel:${PHONE}`} style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'none' }}>{PHONE}</a><br /><br />
+              <strong style={{ color: 'rgba(255,255,255,0.7)' }}>البريد:</strong><br />
+              <span style={{ color: 'rgba(255,255,255,0.45)' }}>leads@grandeur-spaces.com</span><br /><br />
+              <strong style={{ color: 'rgba(255,255,255,0.7)' }}>الموقع:</strong><br />
+              <span style={{ color: 'rgba(255,255,255,0.45)' }}>كيلو 238، رأس الحكمة، الساحل الشمالي</span>
             </p>
           </div>
         </div>
-        <div className="footer-bottom">© 2026 Hacienda Ras El Hekma — Palm Hills Developments | وكيل معتمد</div>
+        <div className="footer-bottom">
+          © 2026 Palm Hills Developments | وكيل معتمد — جميع الحقوق محفوظة
+        </div>
       </footer>
 
-      {/* ─── STICKY CTA ─── */}
+      {/* STICKY CTA */}
       <div className="sticky-cta">
         <a href={`tel:${PHONE}`}>📞 اتصل بنا</a>
-        <a href={WA_LINK} target="_blank" rel="noreferrer">💬 واتساب</a>
+        <a href={WA} target="_blank" rel="noreferrer">💬 واتساب</a>
       </div>
     </>
   )
