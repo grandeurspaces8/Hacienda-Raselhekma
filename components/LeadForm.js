@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Script from 'next/script'
 const PHONE = '01008900076'
 const WA = `https://wa.me/2${PHONE}/?text=مرحباً، أريد الاستفسار عن مشروع هاسيندا رأس الحكمة من بالم هيلز`
-const URL = 'https://formsubmit.co/ajax/leads@grandeur-spaces.com'
+const URL = 'https://api.web3forms.com/submit'
 
 const UNITS = ['Duo — توين هاوس', 'Senior Chalet كبير', 'Senior Chalet صغير', 'Junior Chalet', 'Beach Home — 1 غرفة', 'Beach Home — 2 غرفة', 'Beach Home — 3 غرف', 'فلل الصف الأول', 'فلل الصف الثاني', 'فلل الصف الثالث', 'فلل الصف الرابع']
 
@@ -19,6 +19,7 @@ export default function LeadForm({ dark, title, subtitle, id }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
+          access_key: '21ee661f-c349-4659-b167-5226bbc1f74d',
           name: form.name, phone: form.phone,
           unit: form.unit || 'لم يحدد',
           _subject: `ليد جديد — هاسيندا رأس الحكمة | ${form.name} — ${form.phone}`,
